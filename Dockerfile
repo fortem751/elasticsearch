@@ -7,6 +7,7 @@ LABEL io.openshift.expose-services 9200/tcp:http,9300/tcp:cluster
 
 RUN \
 yum update -y && \
+yum install -y ruby && \
 yum install -y java-1.8.0 && \
 curl -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.noarch.rpm && \
 rpm -i elasticsearch-1.7.2.noarch.rpm && \

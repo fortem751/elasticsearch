@@ -31,6 +31,8 @@
 #
 #cluster.name: elasticsearch
 
+discovery.zen.ping.multicast.enabled: false
+#discovery.zen.ping.unicast.hosts: ${EPS}
 
 #################################### Node #####################################
 

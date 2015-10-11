@@ -22,6 +22,8 @@ ENV node_master true
 ENV node_data true
 ENV http_enabled true
 
+EXPOSE 9200 9300
+
 RUN useradd elastic
 
 USER elastic

@@ -21,8 +21,14 @@ resp = http.start{|http| http.request(req)}
 parsed = JSON.parse(resp.body)
 
 eps = Array.new
-parsed["items"][0]["subsets"][0]["addresses"].each do |ep|
-  eps << ep["ip"]
+parsed["items"].each do |service|
+  if service["subsets"].size > 0
+    service["subsets"][0]["addresses"].each do |ep|
+      unless ep.nil?
+        eps << ep["ip"]
+      end
+    end
+  end
 end
 
 puts eps.join ","

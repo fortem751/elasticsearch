@@ -9,9 +9,11 @@ RUN \
 yum update -y && \
 yum install -y ruby && \
 yum install -y java-1.8.0 && \
-curl -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.noarch.rpm && \
-rpm -i elasticsearch-1.7.2.noarch.rpm && \
+curl -O https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/rpm/elasticsearch/2.0.0/elasticsearch-2.0.0.rpm && \
+# curl -O https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.noarch.rpm && \
+rpm -i elasticsearch-2.0.0.rpm && \
 yum clean all && \
+rm -f elasticsearch-2.0.0.rpm && \
 ln -s /etc/elasticsearch /usr/share/elasticsearch/config && \
 ln -s /usr/share/elasticsearch/bin/elasticsearch /bin/elasticsearch && \
 chmod +x /bin/elasticsearch && \

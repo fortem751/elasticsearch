@@ -17,7 +17,8 @@ rm -f elasticsearch-2.0.0.rpm && \
 ln -s /etc/elasticsearch /usr/share/elasticsearch/config && \
 ln -s /usr/share/elasticsearch/bin/elasticsearch /bin/elasticsearch && \
 chmod +x /bin/elasticsearch && \
-chmod -R 0777 /usr/share/elasticsearch
+chmod -R 777 /usr/share/elasticsearch && \
+chmod -R 777 /etc/elasticsearch
 
 COPY container-files /
 

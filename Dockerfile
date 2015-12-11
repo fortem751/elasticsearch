@@ -7,6 +7,7 @@ LABEL io.openshift.expose-services 9200/tcp:http,9300/tcp:cluster
 
 RUN \
 yum update -y && \
+yum install -y iproute && \
 yum install -y ruby && \
 yum install -y java-1.8.0 && \
 curl -O https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/rpm/elasticsearch/2.0.0/elasticsearch-2.0.0.rpm && \

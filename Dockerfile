@@ -6,8 +6,6 @@ LABEL io.k8s.description Elasticsearch Cluster Image
 LABEL io.openshift.expose-services 9200/tcp:http,9300/tcp:cluster
 
 RUN set -x && \
-  cat /etc/resolv.conf && \
-  curl -v 'http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=container'  && \
 yum update -y && \
 yum install -y iproute && \
 yum install -y ruby && \

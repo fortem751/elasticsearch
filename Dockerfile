@@ -5,7 +5,7 @@ LABEL io.openshift.tags java,java18,elasticsearch,elasticsearch172
 LABEL io.k8s.description Elasticsearch Cluster Image
 LABEL io.openshift.expose-services 9200/tcp:http,9300/tcp:cluster
 
-RUN set -x && \
+RUN \
 yum update -y && \
 yum install -y iproute && \
 yum install -y ruby && \

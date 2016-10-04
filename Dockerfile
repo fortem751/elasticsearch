@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/rhel7:latest
+FROM docker.io/openshift/base-centos7:latest
 MAINTAINER Udo Urbantschitsch udo@urbantschitsch.com
 
 LABEL io.openshift.tags java,java18,elasticsearch,elasticsearch172

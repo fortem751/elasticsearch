@@ -6,7 +6,7 @@ LABEL io.k8s.description Elasticsearch Cluster Image
 LABEL io.openshift.expose-services 9200/tcp:http,9300/tcp:cluster
 
 RUN set -x && \
-  cat /etc/resolve && \
+  cat /etc/resolv.conf && \
 yum update -y && \
 yum install -y iproute && \
 yum install -y ruby && \
